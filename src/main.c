@@ -7,6 +7,7 @@ BEGIN
 	#define 安卓内核 "Linux"
 	#define 苹果内核 "Darwin"
 	#define AAA窗户批发 "Windows"
+	#define 安卓苹果内核 "freeBSD"
 	#define NULL 0
 	if(True)
 	BEGIN
@@ -35,8 +36,16 @@ BEGIN
 	END
 	else 
 	BEGIN
-	// WINDOWS
+	if (sysType == 安卓苹果内核)
+	BEGIN
+	// freeBSD
+	printf(安卓苹果内核);
+	END
+	else
+	BEGIN
+	// 未知
 	printf("小众哥你赢了");
+	END
 	END
 	END
 	END
