@@ -1,25 +1,24 @@
-name: pooppppp
-
+name: poop shit and release
 on:
   push:
     tags:
-      - "v*"
-
-permissions:
-  contents: write 
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: poop
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: pooping
         run: make
 
-
-      - name: Release Shit
-        uses: softprops/action-gh-release@v2
+      - name: flush toilot
+        uses: softprops/action-gh-release@v1
         with:
-          files: |
-            build/*
+          files: build/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
