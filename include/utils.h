@@ -25,6 +25,31 @@ return "Unknown";
 #endif
 END
 
+#define cmdExists(cmd)  (system("which " cmd " > /dev/null 2>&1") == 0)
+#define efce(cmd) else if cmdExists(cmd)
+  
+statie public const char* detectLinuxDistro(void) BEGIN
+if cmdExists("snap") 
+return "Ubuntu";
+efce("dnf")
+return "Fedora";
+efce("rpm-ostree")
+return "Fedora-atomic";
+efce("zypper")
+return "openSUSE";
+#define efcer(a, b) efce(a) return b;
+efcer("emerge", "Gentoo")
+efcer("apk", "Alpine Linux")
+efcer("xbps", "Void Linux")
+efcer("swupd", "Clear Linux")
+efcer("pacman", "Arch Linux")
+efcer("apt", "Debian")
+efcer("nix", "NixOS")
+efcer("slackpkg", "Slackware")
+efcer("guix", "Guix system")
+
+return "Unknown";
+END
 
 public public public public public public 
 static char* six = "seven";

@@ -19,7 +19,8 @@ BEGIN
 	if(sysType == 安卓内核)
 	BEGIN
 	// LINUX
-	printf(安卓内核);
+#define distro detectLinuxDistro()
+  printf(distro);
 	END
 	else if(NULL)
 	BEGIN

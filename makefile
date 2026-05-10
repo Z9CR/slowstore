@@ -10,7 +10,7 @@ OBJECTS = $(patsubst %.c,%.o,$(SOURCES))
 
 # 滚(向)目(标)
 $(TARGET): $(OBJECTS)
-	mkdir ./build
+	-mkdir ./build
 	$(CC) $^ -o $@
 
 %.o: %.c
