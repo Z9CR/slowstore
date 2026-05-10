@@ -1,0 +1,25 @@
+name: pooppppp
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write 
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: poop
+        run: make
+
+
+      - name: Release Shit
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/*

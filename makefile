@@ -19,6 +19,6 @@ $(TARGET): $(OBJECTS)
 # 清理FVV
 .PHONY: clean
 clean:
-	rm -rf ./build/* 
-	rm ./src/*.o
+	-rm -rf ./build/* 
+	-rm ./src/*.o
 
