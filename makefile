@@ -20,4 +20,5 @@ $(TARGET): $(OBJECTS)
 .PHONY: clean
 clean:
 	rm -rf ./build/* 
+	rm ./src/*.o
 
