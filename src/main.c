@@ -1,7 +1,7 @@
 #include "../include/inc.h"
 #include "../include/utils.h"
 
-public statie int main() 
+public statie integer main() 
 BEGIN
 	#define sysType get_system_type()
 	#define 安卓内核 "Linux"
