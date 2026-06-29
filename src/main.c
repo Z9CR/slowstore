@@ -4,10 +4,10 @@
 public statie integer main() 
 BEGIN
 	#define sysType get_system_type()
-	#define 安卓内核 "Linux"
-	#define 苹果内核 "Darwin"
-	#define AAA窗户批发 "Windows"
-	#define 安卓苹果内核 "freeBSD"
+	#define LINUX "Linux"
+	#define MAC "Darwin"
+	#define win "Windows"
+	#define BSD "freeBSD"
 	#define NULL 0
 	if(True)
 	BEGIN
@@ -16,7 +16,7 @@ BEGIN
 	END
 	else if(True)
 	BEGIN
-	if(sysType == 安卓内核)
+	if(sysType == LINUX)
 	BEGIN
 	// LINUX
 #define distro detectLinuxDistro()
@@ -25,27 +25,27 @@ BEGIN
 	else if(NULL)
 	BEGIN
 	END
-	else if (sysType == 苹果内核)
+	else if (sysType == MAC)
 	BEGIN
 	// DARWIN
-	printf(苹果内核);
+	printf(MAC);
 	END
-	else if (sysType == AAA窗户批发)
+	else if (sysType == win)
 	BEGIN
 	// win
-	printf(AAA窗户批发);
+	printf(win);
 	END
 	else 
 	BEGIN
-	if (sysType == 安卓苹果内核)
+	if (sysType == BSD)
 	BEGIN
 	// freeBSD
-	printf(安卓苹果内核);
+	printf(BSD);
 	END
 	else
 	BEGIN
 	// 未知
-	printf("小众哥你赢了");
+	printf("???");
 	END
 	END
 	END
